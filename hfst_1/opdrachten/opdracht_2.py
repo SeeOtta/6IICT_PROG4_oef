@@ -9,3 +9,14 @@ scores = [
     [ 7, 6, 5 ], # Life
     [ 6, 5, 6, 6 ] # Different
 ] 
+film_rating = {}
+for index, film in enumerate(films):
+    film_rating[film] = scores[index]
+
+print(film_rating)
+
+film_gemiddelde = {}
+for key, scores in film_rating.items():
+    film_gemiddelde = sum(scores)/len(scores)
+
+print(film_gemiddelde)
