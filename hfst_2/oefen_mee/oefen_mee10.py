@@ -3,7 +3,7 @@
 import copy,json,pygame,random
 
 
-fp = open("oefen_mee10.json", "r")
+fp = open("Leerkracht_Bestanden/6IICT_PROG4_oef/hfst_2/oefen_mee/oefen_mee10.json", "r")
 settings = json.load(fp)
 fp.close()
 
