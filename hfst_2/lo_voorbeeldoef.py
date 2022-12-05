@@ -3,7 +3,7 @@ Schrijf bij iedere regel code commentaar
 De code mag geen foutmeldingen geven
     Opgelet! Code in commentaar wordt niet bekeken.
 """
-
+import json
 """ 
 lo_voorbeeldoefening.json bevat info over het schaakstuk "toren".
 """
@@ -14,7 +14,11 @@ laad lo_voorbeeldoefening.json in Python. Zet deze dictionary in een variabele.
 Lukt dit niet? Dan mag je de dictionary rechtstreeks hieronder plakken.
                Je krijgt dan wel geen punten voor dit onderdeel.
 """
+fp = open( "Leerkracht_Bestanden/6IICT_PROG4_oef/hfst_2/lo_voorbeeldoefening.json", "r" )
+schaakstuk = json.load(fp)
+fp.close()
 
+print(schaakstuk)
 """ STAP 2:
 print volgende zaken over de toren:
     - De naam zelf (toren)
@@ -23,6 +27,8 @@ print volgende zaken over de toren:
 
 Je moet deze info uit de dictionary halen (dus niet manueel invullen).
 """
+for info in schaakstuk:
+    print(info)
 
 """ STAP 3:
 Voeg volgende zaken toe aan de dictionary (links staat de key, rechts de value):
