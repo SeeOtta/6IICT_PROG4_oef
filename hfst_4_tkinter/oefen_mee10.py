@@ -8,10 +8,14 @@ kleur = input("Wat is je favoriete kleur? ")
 venster = tk.Tk()
 
 # TODO: vertaal input van gebruiker naar het Engels
-
 # TODO: maak functie aan die het label in de ingegeven kleur laat zien.
+label = tk.Label(master=venster, text="JOJOJOJOJOJOJOJOJOJOJO")
+def knop_klik():
+    if kleur == "paars":
+        labeltje = tk.Label(master=venster, text=f"{kleur} is mijn favoriete kleur", foreground='purple')
+        labeltje.pack()
 
-knop = tk.Button(master=venster, text="Klik op mij!", command=)
+knop = tk.Button(master=venster, text="he he he jup!", command= knop_klik)
 knop.pack()
 
 # Maak de GUI zichtbaar op de computer.
