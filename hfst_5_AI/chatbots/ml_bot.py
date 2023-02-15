@@ -40,5 +40,5 @@ class ML_Chatbot:
             print(bot_response)
 
 
-bot = ML_Chatbot("Marvin")
+bot = ML_Chatbot("Alkaline")
 print(bot.zoek_antwoord("Test"))
