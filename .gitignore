@@ -177,3 +177,4 @@ cython_debug/
 yolov3.weights
 yolov3_tiny.weights
 toiletpapier
+yolov3-tiny-custom.weights
