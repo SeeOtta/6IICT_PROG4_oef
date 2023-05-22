@@ -1,10 +1,11 @@
 import pygame
+import random
 from particle import BoringParticle
 
 # Constantes.
 breedte, hoogte = 600,600
 fps = 120
-aantal_particles = 20
+aantal_particles = 30
 
 # Start pygame.
 pygame.init()
@@ -16,7 +17,13 @@ klok = pygame.time.Clock()
 #         Het aantal aangemaakte objecten is gelijk aan de variabele *aantal_particles*.
 particles = []  
 """ Vul lijst aan... """
-    
+for aantalen in range(aantal_particles):
+        v_x = random.random() * 1.2 -0.6
+        v_y = random.random() * 1.2 -0.6
+        particles.append(BoringParticle(breedte//2, hoogte//2, v_x, v_y))
+        
+
+
 running = True
 while running:
     # Maak scherm schoon.
@@ -35,9 +42,9 @@ while running:
     #   2. Reset particle wanneer ze uit het scherm zijn.
     #   3. Teken particle op scherm (deels gemaakt).
     for particle in particles:
-        """ 1. Beweeg particle """
-        """ 2. Reset particle """
-        pygame.draw.circle(scherm, (255,255,255), ("3. Vul aan met x-/y-positie van particle"), 10)
+        particle.bewegen(interval)
+        particle.reset(breedte, hoogte)
+        pygame.draw.circle(scherm, (particle.kleur), (int(particle.x), int(particle.y)), 10)
 
     # Toon scherm aan gebruiker.
     pygame.display.update()
